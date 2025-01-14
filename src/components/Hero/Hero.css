@@ -81,19 +81,19 @@
 
 @media (max-width: 1024px) {
   .title {
-    font-size: 20px;
+    font-size: 2.5rem;
   }
 
   .copa-logo, .cat-logo {
-    height: 80px;
+    height: 70px;
   }
 
   .dates {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .banner-content {
-    padding: 0 1rem;
+  .location {
+    font-size: 0.8rem;
   }
 }
 
@@ -101,6 +101,12 @@
   .banner-content {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 
   .event-info {
@@ -108,6 +114,24 @@
   }
 
   .hero-carousel-container {
-    height: 400px;
+    height: 300px;
+  }
+
+  .location {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .copa-logo, .cat-logo {
+    height: 50px;
+  }
+
+  .dates {
+    font-size: 1.5rem;
   }
 }

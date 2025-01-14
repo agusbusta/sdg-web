@@ -1,27 +1,36 @@
 .clubs {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   background-color: #0D222F;
 }
 
 .clubs h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: white;
+  font-size: 1.8rem;
 }
 
 .clubs-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: center;
-}
-
-.club-logo {
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .club-logo img {
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .clubs {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .clubs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
 } 
