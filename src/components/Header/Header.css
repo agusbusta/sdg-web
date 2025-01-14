@@ -38,13 +38,15 @@
   align-items: center;
 }
 
-.nav-menu a {
+.nav-menu a,
+.nav-menu Link {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu Link:hover {
   color: #cccccc;
 }
 
@@ -149,4 +151,12 @@
     width: auto;
     margin: 0.5rem 0;
   }
+} 
+
+.logo a,
+.logo Link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 } 
