@@ -4,18 +4,38 @@ import { FaShare, FaDownload, FaTimes, FaArrowLeft, FaArrowRight } from 'react-i
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     { id: 1, url: `${process.env.PUBLIC_URL}/home.jpg`, title: 'Copa Desafío' },
-    // Agrega más imágenes según tengas disponibles
+    { id: 2, url: `${process.env.PUBLIC_URL}/home.jpg`, title: 'Copa Desafío' },
+    { id: 3, url: `${process.env.PUBLIC_URL}/home.jpg`, title: 'Copa Desafío' },
+    { id: 4, url: `${process.env.PUBLIC_URL}/home.jpg`, title: 'Copa Desafío' },
+    { id: 5, url: `${process.env.PUBLIC_URL}/home.jpg`, title: 'Copa Desafío' },
   ];
 
   const handleImageClick = (image) => {
+    const index = images.findIndex(img => img.id === image.id);
+    setCurrentIndex(index);
     setSelectedImage(image);
   };
 
   const handleClose = () => {
     setSelectedImage(null);
+  };
+
+  const handlePrevious = (e) => {
+    e.stopPropagation();
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+    setCurrentIndex(newIndex);
+    setSelectedImage(images[newIndex]);
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    const newIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+    setCurrentIndex(newIndex);
+    setSelectedImage(images[newIndex]);
   };
 
   const handleDownload = (imageUrl) => {
@@ -39,7 +59,6 @@ function Gallery() {
         console.log('Error sharing:', error);
       }
     } else {
-      // Fallback para navegadores que no soportan Web Share API
       const shareUrl = `https://twitter.com/intent/tweet?text=Mira esta imagen de la Copa Desafío&url=${encodeURIComponent(imageUrl)}`;
       window.open(shareUrl, '_blank');
     }
@@ -66,7 +85,17 @@ function Gallery() {
             <button className="close-button" onClick={handleClose}>
               <FaTimes />
             </button>
+            
+            <button className="nav-button prev" onClick={handlePrevious}>
+              <FaArrowLeft />
+            </button>
+            
             <img src={selectedImage.url} alt={selectedImage.title} />
+            
+            <button className="nav-button next" onClick={handleNext}>
+              <FaArrowRight />
+            </button>
+
             <div className="modal-actions">
               <button onClick={() => handleShare(selectedImage.url)}>
                 <FaShare /> Compartir
