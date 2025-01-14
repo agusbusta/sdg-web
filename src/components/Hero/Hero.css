@@ -1,0 +1,113 @@
+.hero {
+  background-color: #0D222F;
+  color: white;
+  width: 100%;
+  font-family: 'Fussion', sans-serif;
+}
+
+.event-banner {
+  background-color: #0D222F;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.banner-content {
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #0D222F;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  flex: 1;
+  font-family: 'Fussion', sans-serif;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.copa-logo, .cat-logo {
+  height: 100px;
+  width: auto;
+}
+
+.vs {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.event-info {
+  text-align: right;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.dates {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.hero-carousel-container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .copa-logo, .cat-logo {
+    height: 80px;
+  }
+
+  .dates {
+    font-size: 2rem;
+  }
+
+  .banner-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-info {
+    text-align: center;
+  }
+
+  .hero-carousel-container {
+    height: 400px;
+  }
+}

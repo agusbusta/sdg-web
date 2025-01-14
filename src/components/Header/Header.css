@@ -1,0 +1,61 @@
+.header {
+  background-color: #000000;
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo p {
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  font-family: 'Basebul', sans-serif;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  padding-right: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #cccccc;
+}
+
+/* Estilos para el botón de registro */
+.register-button {
+  background-color: #008000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #009000;
+  color: white !important;
+} 

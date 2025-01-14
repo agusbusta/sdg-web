@@ -1,0 +1,27 @@
+.clubs {
+  padding: 1rem 1rem;
+  background-color: #0D222F;
+}
+
+.clubs h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.clubs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+}
+
+.club-logo {
+  text-align: center;
+}
+
+.club-logo img {
+  max-width: 200px;
+  height: auto;
+} 
