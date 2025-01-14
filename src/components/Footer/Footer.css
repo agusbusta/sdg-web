@@ -41,6 +41,18 @@
   margin-bottom: 0.5rem;
 }
 
+.footer-copyright {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 1.5rem 0.5rem;
@@ -59,5 +71,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-copyright {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
   }
 } 

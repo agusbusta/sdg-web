@@ -41,6 +41,10 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <div className="footer-copyright">
+        <p>SUEÑOS DE GOL &copy; 2025</p>
+        <p>Todos los derechos reservados</p>
+      </div>
     </footer>
   );
 }
