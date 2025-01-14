@@ -6,6 +6,8 @@ import Gallery from './components/Gallery/Gallery';
 import ParticipatingClubs from './components/ParticipatingClubs/ParticipatingClubs';
 import AboutSection from './components/AboutSection/AboutSection';
 import Footer from './components/Footer/Footer';
+import FAQ from './components/FAQ/FAQ';
+import Legal from './components/Legal/Legal';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/galeria" element={<Gallery />} />
+          <Route path="/preguntas" element={<FAQ />} />
+          <Route path="/legales" element={<Legal />} />
           <Route path="/" element={
             <>
               <Hero />
