@@ -25,6 +25,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .faq-item:hover {
@@ -42,6 +43,7 @@
 .faq-question h3 {
   margin: 0;
   font-size: 1.1rem;
+  color: white;
   font-weight: 500;
 }
 
