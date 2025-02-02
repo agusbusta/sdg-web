@@ -32,7 +32,7 @@ function FAQ() {
     },
     {
       question: "¿Dónde puedo consultar el reglamento completo?",
-      answer: "El reglamento está disponible para descarga en nuestro sitio web y se enviará como parte del kit informativo tras completar tu inscripción."
+      answer: "Puedes consultar el reglamento completo haciendo clic <a href='/docs/reglamento.docx' target='_blank' rel='noopener noreferrer'>aquí</a>. También se enviará como parte del kit informativo tras completar tu inscripción."
     },
     {
       question: "¿Cuáles son los requisitos para participar?",
@@ -59,7 +59,7 @@ function FAQ() {
               {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
             </div>
             <div className="faq-answer">
-              <p>{faq.answer}</p>
+              <p dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
             </div>
           </div>
         ))}
